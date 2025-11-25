@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Form Mobil</title>
+
+  <style>
+    :root{
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --danger: #ef4444;
+      --border: #e6e9ef;
+      --radius: 8px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);}
+    .container{max-width:700px;margin:36px auto;padding:18px;}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+    h1{margin:0 0 8px;font-size:18px}
+    p.lead{margin:0 0 16px;color:var(--muted);font-size:13px}
+
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input[type="text"], input[type="number"], select{width:100%;padding:10px;border:1px solid var(--border);border-radius:6px;font-size:14px;box-sizing:border-box}
+
+    .full{grid-column:1/-1}
+    .actions{display:flex;gap:10px;justify-content:flex-end;margin-top:8px}
+    .btn{padding:10px 14px;border-radius:8px;border:1px solid transparent;font-size:14px;cursor:pointer}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-muted{background:transparent;border:1px solid var(--border);color:var(--muted)}
+    .btn-danger{background:transparent;color:var(--danger);border:1px solid transparent}
+
+    @media (max-width:640px){
+      form{grid-template-columns:1fr}
+      .actions{justify-content:space-between}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Form Mobil</h1>
+
+      <form method="post" action="index.php">
+        <input type="hidden" name="action_mobil" value="add" id="mobil-action">
+        <input type="hidden" name="id" value="" id="mobil-id">
+
+        <div>
+          <label for="namaMobil">Nama Mobil</label>
+          <input id="namaMobil" name="namaMobil" type="text" placeholder="YZR-M1, RC213V" required>
+        </div>
+
+        <div>
+          <label for="pabrikan">Pabrikan</label>
+          <input id="pabrikan" name="pabrikan" type="text" placeholder="Yamaha, Honda, Ducati" required>
+        </div>
+
+        <div>
+          <label for="tipe">Tipe</label>
+          <input id="tipe" name="tipe" type="text" placeholder="MotoGP, Superbike">
+        </div>
+
+        <div>
+          <label for="cc">Kapasitas (CC)</label>
+          <input id="cc" name="cc" type="number" min="50" placeholder="1000">
+        </div>
+
+        <div>
+          <label for="topSpeed">Top Speed (km/h)</label>
+          <input id="topSpeed" name="topSpeed" type="number" min="0" placeholder="350">
+        </div>
+
+        <div>
+          <label for="pembalapId">ID Pembalap</label>
+          <input id="pembalapId" name="pembalapId" type="number" min="1" placeholder="1">
+        </div>
+
+        <div class="full actions">
+          <a href="index.php?screen_mobil=list" class="btn btn-muted">Batal</a>
+          <button type="submit" class="btn btn-primary">Simpan</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var form = document.querySelector('form');
+      if(!form) return;
+      form.addEventListener('submit', function(e){
+        var nama = document.getElementById('nama');
+        if(!nama.value.trim()){
+          alert('Nama harus diisi');
+          nama.focus();
+          e.preventDefault();
+          return false;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
