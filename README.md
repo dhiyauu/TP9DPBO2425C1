@@ -46,72 +46,73 @@ Terdapat 2 tabel beserta atribut pada database, diantaranya:
 
 ### Desain Arsitektur Program
 **1. Model**
-
-    Model bertanggung jawab pada operasi database:
-
-    - TabelPembalap.php
     
-        `getAllPembalap()`
+Model bertanggung jawab pada operasi database:
 
-        `getPembalapById()`
+- TabelPembalap.php
+    
+  `getAllPembalap()`
 
-        `addPembalap()`
+  `getPembalapById()`
 
-        `updatePembalap()`
+  `addPembalap()`
 
-        `deletePembalap()`
+  `updatePembalap()`
 
-    - TabelMobil.php
+  `deletePembalap()`
 
-        `getAllMobil()`
+- TabelMobil.php
 
-        `getMobilById()`
+  `getAllMobil()`
 
-        `addMobil()`
+  `getMobilById()`
 
-        `updateMobil()`
+  `addMobil()`
 
-        `deleteMobil()`
+  `updateMobil()`
 
-    Model menggunakan class `DB` untuk menjalankan query SQL.
+  `deleteMobil()`
+
+Model menggunakan class `DB` untuk menjalankan query SQL.
+
 **2. View**
 
-    View hanya menampilkan tampilan HTML (tanpa logika bisnis):
-    - ViewPembalap
+View hanya menampilkan tampilan HTML (tanpa logika bisnis):
+- ViewPembalap
 
-        * menyusun tabel pembalap
+  * menyusun tabel pembalap
 
-        * menyusun form pembalap
+  * menyusun form pembalap
 
-    - ViewMobil
+- ViewMobil
 
-        * menyusun tabel mobil
+  * menyusun tabel mobil
 
-        * menyusun form mobil
+  * menyusun form mobil
 
 Setiap view membaca template dari folder `/template/`.
 
 **3. Presenter**
 
-    Presenter menjadi penghubung Model ↔ View:
+Presenter menjadi penghubung Model ↔ View:
 
-    - PresenterPembalap
+- PresenterPembalap
 
-        * memanggil model untuk mengambil data pembalap
+  * memanggil model untuk mengambil data pembalap
 
-        * memanggil view untuk merender tabel
+  * memanggil view untuk merender tabel
 
-        * menangani aksi tambah/edit/hapus pembalap
+  * menangani aksi tambah/edit/hapus pembalap
 
-    - PresenterMobil
+- PresenterMobil
 
-        * memanggil model untuk mengambil data mobil
+  * memanggil model untuk mengambil data mobil
 
-        * memanggil view untuk merender tabel
+  * memanggil view untuk merender tabel
 
-        * menangani aksi tambah/edit/hapus mobil
+  * menangani aksi tambah/edit/hapus mobil
 
-    Presenter yang menerima request dari `index.php`.
+Presenter yang menerima request dari `index.php`.
 
 ## Penjelasan Alur Program
 
@@ -138,4 +139,5 @@ Antarmuka pengguna dirancang dengan gaya modern dan bersih. Setiap bagian ditata
 
 ## Dokumentasi
 https://github.com/user-attachments/assets/a7fbbeb6-1505-41dc-8d53-5c6622be9dde
+
 
