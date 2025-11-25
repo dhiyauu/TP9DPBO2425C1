@@ -135,4 +135,6 @@ Penghapusan data dilakukan melalui tombol Hapus, yang telah dilengkapi dengan Ja
 
 Antarmuka pengguna dirancang dengan gaya modern dan bersih. Setiap bagian ditata menggunakan kartu (card) terpisah untuk pembalap dan mobil, sehingga informasi mudah dibaca. Tampilan tabel dibuat sederhana namun profesional, dilengkapi dengan tombol aksi seperti **Edit** dan **Hapus**, serta penanda total data. Efek hover tambahan memberikan kesan interaktif yang halus. Selain itu, seluruh layout dirancang responsif agar tetap rapi ketika diakses melalui perangkat mobile. Tombol “+ Tambah” juga mengikuti skema warna yang konsisten sesuai tema keseluruhan antarmuka.
 
+
 ## Dokumentasi
+https://github.com/user-attachments/assets/a7fbbeb6-1505-41dc-8d53-5c6622be9dde
