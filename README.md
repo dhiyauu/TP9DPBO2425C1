@@ -45,7 +45,7 @@ Terdapat 2 tabel beserta atribut pada database, diantaranya:
     `pembalap_id` : Menghubungkan mobil dengan pemilik/pembalap
 
 ### Desain Arsitektur Program
-1. Model
+**1. Model**
 
     Model bertanggung jawab pada operasi database:
 
@@ -74,7 +74,7 @@ Terdapat 2 tabel beserta atribut pada database, diantaranya:
         `deleteMobil()`
 
     Model menggunakan class `DB` untuk menjalankan query SQL.
-2. View
+**2. View**
 
     View hanya menampilkan tampilan HTML (tanpa logika bisnis):
     - ViewPembalap
@@ -91,7 +91,7 @@ Terdapat 2 tabel beserta atribut pada database, diantaranya:
 
 Setiap view membaca template dari folder `/template/`.
 
-3. Presenter
+**3. Presenter**
 
     Presenter menjadi penghubung Model ↔ View:
 
@@ -138,3 +138,4 @@ Antarmuka pengguna dirancang dengan gaya modern dan bersih. Setiap bagian ditata
 
 ## Dokumentasi
 https://github.com/user-attachments/assets/a7fbbeb6-1505-41dc-8d53-5c6622be9dde
+
